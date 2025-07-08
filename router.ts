@@ -1,5 +1,5 @@
-export type RouteParams = {
+export type Routes = {
     Home: undefined;
-    Details: { title:string; stock:number; content:string;
-    };
+    Settings: undefined;
+    News: undefined;
 }
