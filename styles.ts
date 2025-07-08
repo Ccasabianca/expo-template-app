@@ -1,47 +1,28 @@
-import { Platform, StatusBar, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
+
 export default StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "column",
-    justifyContent: "space-around",
-    alignItems: "center",
-    backgroundColor: "ghostwhite",
-    ...Platform.select({
-      ios: { paddingTop: 20 },
-      android: {
-        paddingTop: StatusBar.currentHeight,
-        paddingBottom: StatusBar.currentHeight,
-        gap: 40,
-      },
-    }),
-  },
-  box: {
-    height: 80,
-    width: 80,
-    margin: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "lightgreen",
-    borderWidth: 1,
-    borderStyle: "dotted",
-    borderColor: "darkgreen",
-  },
-  boxText: {
-    color: "black",
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  row: {
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignSelf: "stretch",
-  },
-  column: {
-        flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "space-around",
-    alignSelf: "stretch",
-  }
+container : {
+  flex:1,
+  flexDirection: "column",
+  paddingTop: 100,
+},
+item: {
+  margin:5,
+  padding:5,
+  color:"black",
+  backgroundColor:"lightgreen",
+  textAlign: "center",
+},
+filter : {
+height:40,
+width:200,
+},
+controls: {
+  flex:1,
+  flexDirection:"row",
+  justifyContent:"space-between",
+  alignItems:"center",
+  padding:10,
+  backgroundColor:"white",
+},
 });

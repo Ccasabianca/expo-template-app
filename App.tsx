@@ -1,33 +1,11 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-import { NavigationContainer } from "@react-navigation/native";
-import { Platform } from "react-native";
-import Home from "./components/Home";
-import News from "./components/News";
-import Settings from "./components/Settings";
-import { Routes } from "./router";
-
-const Tab = createBottomTabNavigator<Routes>();
-const Drawer = createDrawerNavigator<Routes>();
+import { View } from "react-native";
+import ListContainer from "./components/ListContainer";
+import styles from "./styles";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      {Platform.OS === "ios" && (
-        <Tab.Navigator>
-          <Tab.Screen name="Home" component={Home} />
-          <Tab.Screen name="News" component={News} />
-          <Tab.Screen name="Settings" component={Settings} />
-        </Tab.Navigator>
-      )}
-
-      {Platform.OS == "android" && (
-        <Drawer.Navigator>
-          <Drawer.Screen name="Home" component={Home} />
-          <Drawer.Screen name="News" component={News} />
-          <Drawer.Screen name="Settings" component={Settings} />
-        </Drawer.Navigator>
-      )}
-    </NavigationContainer>
+    <View style={styles.container}>
+      <ListContainer />
+    </View>
   );
 }
