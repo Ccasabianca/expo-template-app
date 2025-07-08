@@ -1,4 +1,5 @@
-export type RootStackParamList = {
+export type RouteParams = {
     Home: undefined;
-    Details: { title:string};
+    Details: { title:string; stock:number; content:string;
+    };
 }
